@@ -1,14 +1,323 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ep_site</title>
-    <script type="module" crossorigin src="/assets/index-CzM_k9_x.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CbQqlOWo.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Crack Between Reality and Emotion</title>
+    <style>
+        :root {
+            --primary-bg: #000066;
+            --text-color: #ffff00;
+            --accent-color: #ffffff;
+            --hover-color: #ffff99;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .release-year {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        .cover-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .cover-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--text-color);
+            box-shadow: 0 0 20px rgba(255, 255, 0, 0.2);
+        }
+        
+        .tracklist-section {
+            margin-bottom: 2rem;
+        }
+        
+        .tracklist-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--text-color);
+            box-shadow: 0 0 20px rgba(255, 255, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        .tracks-list {
+            list-style: none;
+            border: 1px solid var(--text-color);
+            background-color: rgba(0, 0, 102, 0.7);
+            padding: 1rem;
+        }
+        
+        .track {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 0, 0.3);
+        }
+        
+        .track:last-child {
+            border-bottom: none;
+        }
+        
+        .track-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .track-number {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            min-width: 2rem;
+        }
+        
+        .track-title {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+        
+        .play-button {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--text-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .play-button:hover {
+            background-color: var(--text-color);
+            color: var(--primary-bg);
+        }
+        
+        .play-button.playing {
+            background-color: var(--text-color);
+            color: var(--primary-bg);
+        }
+        
+        .about-section {
+            padding: 2rem;
+            border: 1px solid var(--text-color);
+            background-color: rgba(0, 0, 102, 0.7);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .about-section p {
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            padding: 1rem;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .track {
+                padding: 0.8rem;
+            }
+            
+            .track-title {
+                font-size: 1rem;
+            }
+            
+            .play-button {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>A CRACK BETWEEN REALITY AND EMOTION</h1>
+            <p class="release-year">2025</p>
+        </header>
+        
+        <main>
+            <section class="cover-section">
+                <img src="images/cover.png" alt="EP Cover - A Crack Between Reality and Emotion" class="cover-image">
+            </section>
+            
+            <section class="tracklist-section">
+                <img src="images/tracklist.png" alt="EP Tracklist Visualization" class="tracklist-image">
+                
+                <h2>TRACKLIST</h2>
+                <ul class="tracks-list">
+                    <li class="track">
+                        <div class="track-info">
+                            <span class="track-number">1.</span>
+                            <span class="track-title">BEGIN AGAIN</span>
+                        </div>
+                        <button class="play-button" onclick="playTrack(1)">▶</button>
+                    </li>
+                    <li class="track">
+                        <div class="track-info">
+                            <span class="track-number">2.</span>
+                            <span class="track-title">STILL ALIVE</span>
+                        </div>
+                        <button class="play-button" onclick="playTrack(2)">▶</button>
+                    </li>
+                    <li class="track">
+                        <div class="track-info">
+                            <span class="track-number">3.</span>
+                            <span class="track-title">OUT THERE</span>
+                        </div>
+                        <button class="play-button" onclick="playTrack(3)">▶</button>
+                    </li>
+                    <li class="track">
+                        <div class="track-info">
+                            <span class="track-number">4.</span>
+                            <span class="track-title">COLD REFLECTION</span>
+                        </div>
+                        <button class="play-button" onclick="playTrack(4)">▶</button>
+                    </li>
+                    <li class="track">
+                        <div class="track-info">
+                            <span class="track-number">5.</span>
+                            <span class="track-title">ECHO DUST</span>
+                        </div>
+                        <button class="play-button" onclick="playTrack(5)">▶</button>
+                    </li>
+                    <li class="track">
+                        <div class="track-info">
+                            <span class="track-number">6.</span>
+                            <span class="track-title">LONELY NIGHT</span>
+                        </div>
+                        <button class="play-button" onclick="playTrack(6)">▶</button>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="about-section">
+                <h2>ABOUT THE EP</h2>
+                <p>
+                    "A Crack Between Reality and Emotion" explores the space between our logical understanding 
+                    of the world and our emotional responses to it. This EP represents a journey through 
+                    different states of mind, from introspection to revelation, creating a sonic landscape 
+                    that bridges the gap between what we think and what we feel.
+                </p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 All Rights Reserved</p>
+        </footer>
+    </div>
+    
+    <audio id="audioPlayer"></audio>
+    
+    <script>
+        const tracks = [
+            { id: 1, title: 'BEGIN AGAIN', file: 'songs/1-BEGIN AGAIN.wav' },
+            { id: 2, title: 'STILL ALIVE', file: 'songs/2-STILL ALIVE.wav' },
+            { id: 3, title: 'OUT THERE', file: 'songs/3-OUT THERE.wav' },
+            { id: 4, title: 'COLD REFLECTION', file: 'songs/4-COLD REFLECTION.wav' },
+            { id: 5, title: 'ECHO DUST', file: 'songs/5-ECHO DUST.wav' },
+            { id: 6, title: 'LONELY NIGHT', file: 'songs/6-LONLY NIGHT.wav' }
+        ];
+        
+        let currentTrack = null;
+        const audioPlayer = document.getElementById('audioPlayer');
+        const buttons = document.querySelectorAll('.play-button');
+        
+        function playTrack(trackId) {
+            const track = tracks.find(t => t.id === trackId);
+            
+            // Reset all buttons
+            buttons.forEach(btn => {
+                btn.innerHTML = '▶';
+                btn.classList.remove('playing');
+            });
+            
+            if (currentTrack && currentTrack.id === trackId && !audioPlayer.paused) {
+                // Pause current track
+                audioPlayer.pause();
+                currentTrack = null;
+            } else {
+                // Play new track or resume paused track
+                if (currentTrack?.id !== trackId) {
+                    audioPlayer.src = track.file;
+                }
+                
+                audioPlayer.play()
+                    .then(() => {
+                        currentTrack = track;
+                        const button = document.querySelector(`.track:nth-child(${trackId}) .play-button`);
+                        button.innerHTML = '❚❚';
+                        button.classList.add('playing');
+                    })
+                    .catch(error => {
+                        console.error('Error playing audio:', error);
+                    });
+            }
+        }
+        
+        // Handle audio ending
+        audioPlayer.addEventListener('ended', () => {
+            if (currentTrack) {
+                const button = document.querySelector(`.track:nth-child(${currentTrack.id}) .play-button`);
+                button.innerHTML = '▶';
+                button.classList.remove('playing');
+                currentTrack = null;
+            }
+        });
+    </script>
+</body>
 </html>
